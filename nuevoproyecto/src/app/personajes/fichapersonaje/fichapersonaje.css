@@ -1,0 +1,24 @@
+.personaje{
+    width: 200px;
+    height: 300px;
+    background-color: brown;
+
+    color: black;
+    font-size: 15px;
+    border: 4px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+
+}
+
+.personaje img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+

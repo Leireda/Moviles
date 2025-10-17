@@ -1,0 +1,43 @@
+.example-spacer {
+    flex: 1 1 auto; 
+}
+
+.option{
+    cursor: pointer; 
+}
+
+.option:hover{
+    font-weight: 700;
+}
+
+
+.nav-halloween{
+    background-color: blueviolet;
+    color: white;
+  
+}
+
+.backgroud.video{
+    position: fixed;
+    top: 0px; 
+    left: 0px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    z-index: -1;
+
+}
+
+@media (max-width: 900px){
+    .option1 {
+        display: none;
+    }
+
+
+}
+
+@media (min-width: 900px){
+    .option2{
+        display: none;
+    }
+}
