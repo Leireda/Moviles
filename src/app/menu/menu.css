@@ -1,0 +1,13 @@
+.tablero{
+    width: 50%;
+    height: 50%;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+
+

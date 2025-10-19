@@ -1,0 +1,84 @@
+<p class="titulo"> FISTA DE HALLOWEEN DEL CONDE CHIBI</p>
+<form [formGroup]="nocheHalloween" (ngSubmit)="mostrar()">
+    <div class="invitacion">
+        <label for="nombre">Nombre:</label>
+          <input id="nombre" formControlName="nombre" [ngClass]="{'error-input': nocheHalloween.controls['nombre'].touched && nocheHalloween.controls['nombre'].invalid}">
+            @if(nocheHalloween.controls['nombre'].touched){
+  <small class="mensaje error">
+    @if(nocheHalloween.controls['nombre'].hasError('required')) {“👻 Este campo da más miedo vacío, ¡rellénalo!”}
+    @if(nocheHalloween.controls['nombre'].hasError('minlength')) {minimo 3 letras}
+ </small>
+}
+
+</div>
+
+  <div class="invitacion">
+        <label for="email">Email:</label>
+          <input id="email" formControlName="email"  [ngClass]="{'error-input': nocheHalloween.controls['email'].touched && nocheHalloween.controls['email'].invalid}">
+           @if (nocheHalloween.controls['email'].touched) {
+  <small class="mensaje error">
+    @if(nocheHalloween.controls['email'].hasError('required')) {“🩸 Ese correo parece maldito… revisa el formato.”}
+   @if(nocheHalloween.controls['email'].hasError('email')) {minimo 3 letras}
+ </small>
+}
+
+  </div>
+
+  <div>
+    <label for="tipoInvitado">tipoInvitado</label>
+    <select id="tipoInvitado" formControlName="tipoInvitado" >
+        <option value="">que eres?</option>
+        <option value="humano">👱🏻‍♀️</option>
+        <option value="fantasma">👻</option>
+        <option value="vampiro">🧛🏻‍♂️</option>
+        <option value="bruja">🧙🏼</option>   
+    </select>
+          @if(nocheHalloween.controls['tipoInvitado'].touched && nocheHalloween.controls['tipoInvitado'].hasError('required')){
+  <small class="mensaje error">
+    “👻 Este campo da más miedo vacío, ¡rellénalo!”
+ </small>
+}
+
+<div> 
+    <label for="disfraz">Disfraz</label> 
+     <input id="disfraz" formControlName="disfraz" [ngClass]="{'error-input': nocheHalloween.controls['email'].touched && nocheHalloween.controls['email'].invalid}">
+    @if(nocheHalloween.controls['disfraz'].touched){
+  <small class="mensaje error">
+    @if(nocheHalloween.controls['disfraz'].hasError('required')) {“👻 Este campo da más miedo vacío, ¡rellénalo!”}
+
+ </small>
+}
+           
+</div>
+
+
+<div>
+  <label for="fechaLlegada">Fecha de Llegada</label>
+  <input type="date" id="fecha" name="fecha">
+   @if(nocheHalloween.controls['fechaLlegada'].touched){
+  <small class="mensaje error">
+    @if(nocheHalloween.controls['fechaLlegada'].hasError('required')) {“👻 Este campo da más miedo vacío, ¡rellénalo!”}
+
+ </small>
+}
+ 
+</div>
+
+<div>
+  <section class="example-section">
+  <mat-checkbox class="checkbox">prometo no morder a los demas invitados!</mat-checkbox>
+   </section>
+</div>
+
+<div>
+
+<button type="submit">enviar</button>
+</div>
+
+
+
+
+ 
+</div>
+
+</form>

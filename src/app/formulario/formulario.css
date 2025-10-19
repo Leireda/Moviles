@@ -1,0 +1,8 @@
+.mensaje.error{
+   color: red;
+}
+
+.contenedor.campo{
+    display: flex;
+
+}

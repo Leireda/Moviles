@@ -1,0 +1,15 @@
+
+.error:invalid{
+    display: flex;
+    flex-direction: column;
+    color: #b30000;
+
+}
+
+
+.error-input{
+    border: 2px solid #b30000;
+    box-shadow: 0 0 10px #b30000;
+    transition: 0.3s ease;
+ 
+}
