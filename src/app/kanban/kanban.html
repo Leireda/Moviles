@@ -1,0 +1,91 @@
+<h1> tareas</h1>
+ <form [formGroup]="tareas" (ngSubmit)="mostrar()">
+  <div class="formulario">
+    <label for="tarea">Nombre:</label>
+    <input id="nombre" formControlName="nombre">
+
+     <button (click)="mostrar()">añadir tarea</button>
+    <button type="submit">borrar</button>
+
+
+     <div class="formulario">
+    <label for="tarea">descripcion:</label>
+      <input id="descripcion" formControlName="descripcion">
+      
+    
+    <button (click)="mostrar()">añadir tarea</button>
+    <button type="submit">borrar</button>
+
+   </div>
+ 
+
+  
+<div class="example-container">
+  <h2>To do</h2>
+
+  <div
+     cdkDropList
+      #todoList="cdkDropList"
+      [cdkDropListData]="todo"
+      [cdkDropListConnectedTo]="[doneList]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      @for (item of todo; track item) {
+     
+      <div class="example-box" cdkDrag>{{item.nombre}}</div>
+      <span matButton [matMenuTriggerFor]="menu"><mat-icon>expand_more</mat-icon></span>
+       <mat-menu #menu="matMenu">
+           <p>{{item.descripcion}}</p>
+           <p>{{item.nombre}}</p>
+       </mat-menu>
+       
+    }
+  </div>
+  
+</div>
+
+<div class="example-container">
+  <h2>Done</h2>
+
+  <div
+    cdkDropList
+      #doneList="cdkDropList"
+      [cdkDropListData]="done"
+      [cdkDropListConnectedTo]="[todoList]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      @for (item of done; track item) {
+      <div class="example-box" cdkDrag>{{item.nombre}}</div>
+        <span matButton [matMenuTriggerFor]="menu"><mat-icon>expand_more</mat-icon></span>
+       <mat-menu #menu="matMenu">
+           <p>{{item.descripcion}}</p>
+           <p>{{item.nombre}}</p>
+       </mat-menu>
+            
+    }
+  </div>
+</div>
+
+<div class="example-container">
+  <h2>Doing</h2>
+
+  <div
+    cdkDropList
+     #doneList="cdkDropList"
+      [cdkDropListData]="doing"
+      [cdkDropListConnectedTo]="[doneList]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      @for (item of doing; track item) {
+      <div class="example-box" cdkDrag>{{item.nombre}}</div>
+      <span matButton [matMenuTriggerFor]="menu"><mat-icon>expand_more</mat-icon></span>
+        <mat-menu #menu="matMenu">
+           <p>{{item.descripcion}}</p>
+           <p>{{item.nombre}}</p>
+       </mat-menu>
+         
+      }
+  </div>
+</div>
+
+ 

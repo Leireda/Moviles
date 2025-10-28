@@ -6,6 +6,8 @@ import { Contador } from './contador/contador';
 import { Listapersonajes } from './personajes/listapersonajes/listapersonajes';
 import { Formulario } from './formulario/formulario';
 import { Halloween } from './halloween/halloween';
+import { kanban } from './kanban/kanban';
+
 
 
 export const routes: Routes = [
@@ -15,6 +17,7 @@ export const routes: Routes = [
     {path: 'eye-candy', component: EyeCandy},
     {path: 'listapersonajes', component: Listapersonajes},
     {path: 'formulario', component: Formulario},
-    {path: 'halloween', component: Halloween}
+    {path: 'halloween', component: Halloween},
+    {path: 'kanban', component: kanban}, 
     
 ];
