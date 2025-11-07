@@ -7,6 +7,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { CommonModule, NgClass } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { LocalStorage } from '../services/local-storage';
 
 
 
@@ -22,6 +23,17 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
   styleUrl: './navbar.css'
 })
 export class Navbar {
+
+  nombre:string=""; 
+
+  constructor(private almacenamiento: LocalStorage){
+
+  }
+
+  ngOnInit(){
+    this.almacenamiento.getItem("nombre"); 
+  }
+
     esHalloween:boolean = false; 
 
    

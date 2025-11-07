@@ -1,10 +1,10 @@
 <h1>APLICACIONES MOVILES</h1>
-<mat-toolbar color="primary" [ngClass]="{'nav-halloween': esHalloween}">
-<div class="option2">
-<button matIconButton [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+ <mat-toolbar color="primary" [ngClass]="{'nav-halloween': esHalloween}">
+ <div class="option2">
+ <button matIconButton [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
   <mat-icon>more_vert</mat-icon>
-</button>
-<mat-menu #menu="matMenu">
+ </button>
+ <mat-menu #menu="matMenu">
      <button mat-menu-item routerLink="/contador">Contador</button>
      <button mat-menu-item routerLink="/matatopos">Matattopos</button>
      <button mat-menu-item routerLink="/carrera">Carrera</button>
@@ -13,10 +13,10 @@
      <button mat-menu-item routerLink="/contador">Formulario</button>
      <button mat-menu-item routerLink="/halloween">halloween</button>
      <button mat-menu-item routerLink="/kanban">kanban</button>
-</mat-menu>
-</div>
+ </mat-menu>
+ </div>
 
-<div class="option1">
+ <div class="option1">
 
      <a matButton="tonal"  routerLink="/contador">contador</a>
      <a matButton="tonal"  routerLink="/matatopos">matatopos</a>
@@ -26,13 +26,12 @@
      <a matButton="tonal" routerLink="/formulario">formulario</a>
      <a matButton="tonal" routerLink="/halloween">halloween</a>
      <a matButton="tonal" routerLink="/kanban">kanban</a> 
-</div>
+ </div>
 
-<!--<span class="option"><mat-slide-toggle [(ngModel)]=esHalloween></mat-slide-toggle></span>-->
 
-<span class="option"><mat-slide-toggle [(ngModel)]=esHalloween></mat-slide-toggle></span>
-<video autoplay muted lop playsInline class="backgroud-video">
+ <span class="option">{{nombre}}</span>
+ <video autoplay muted lop playsInline class="backgroud-video">
      <source src="/238119.mov.mp4" type = "video/mp4"> 
-</video>
+ </video>
 </mat-toolbar>
 
