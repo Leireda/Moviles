@@ -1,5 +1,6 @@
 <h1>APLICACIONES MOVILES</h1>
- <mat-toolbar color="primary" [ngClass]="{'nav-halloween': esHalloween}">
+ <mat-toolbar color="primary" [ngClass]="{'nav-halloween': esHalloween}" [ngClass]="{'nav-Navidad': esNavidad}">
+ 
  <div class="option2">
  <button matIconButton [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
   <mat-icon>more_vert</mat-icon>
@@ -30,8 +31,13 @@
 
 
  <span class="option">{{nombre}}</span>
- <video autoplay muted lop playsInline class="backgroud-video">
-     <source src="/238119.mov.mp4" type = "video/mp4"> 
- </video>
-</mat-toolbar>
+ <span class="option" (click)="cambiarHalloween()">  <mat-slide-toggle [(ngModel)]="esHalloween"></mat-slide-toggle></span>
 
+
+ <span class="option">{{nombre}}</span>
+ <span class="option" (click)="cambiarNavidad()">  <mat-slide-toggle [(ngModel)]="esNavidad"></mat-slide-toggle></span>
+
+
+
+</mat-toolbar>
+ 

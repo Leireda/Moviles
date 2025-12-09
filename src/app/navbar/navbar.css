@@ -12,32 +12,27 @@
 
 
 .nav-halloween{
-    background-color: blueviolet;
+    background-color: rgb(219, 90, 15);
     color: white;
+    
+    
   
 }
 
-.backgroud.video{
-    position: fixed;
-    top: 0px; 
-    left: 0px;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    z-index: -1;
-
+.nav-Navidad{
+    background-color: green;
+    color: white
+    
+    
 }
 
-@media (max-width: 900px){
-    .option1 {
-        display: none;
-    }
+
+.body{
+    background-image: url(/public/fondo-halloween.jpg) ;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
 
 
-}
-
-@media (min-width: 900px){
-    .option2{
-        display: none;
-    }
 }

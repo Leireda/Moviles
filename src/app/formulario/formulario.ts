@@ -26,7 +26,7 @@ export class Formulario{
       console.log("el formulario contiene errores."); 
     } else {
       console.log(this.formulario.value)
-      this.almacenamiento.setItem("nombre", this.formulario.value.nombre);
+      this.almacenamiento.setNombre( this.formulario.value.nombre);
     }
    
   }

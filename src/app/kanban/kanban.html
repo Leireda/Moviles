@@ -4,8 +4,6 @@
     <label for="tarea">Nombre:</label>
     <input id="nombre" formControlName="nombre">
 
-     <button (click)="mostrar()">añadir tarea</button>
-    <button type="submit">borrar</button>
 
 
      <div class="formulario">
@@ -14,14 +12,13 @@
       
     
     <button (click)="mostrar()">añadir tarea</button>
-    <button type="submit">borrar</button>
 
    </div>
  
 
-  
+<div cdkDropListGroup>
 <div class="example-container">
-  <h2>To do</h2>
+  <h2>To do {{todo.length}}</h2>
 
   <div
      cdkDropList
@@ -32,11 +29,12 @@
       (cdkDropListDropped)="drop($event)">
       @for (item of todo; track item) {
      
-      <div class="example-box" cdkDrag>{{item.nombre}}</div>
+      <div class="example-box" cdkDrag>{{item.nombre}}
+      <button (click)="borrar(todo, item)">Borrar</button></div>
       <span matButton [matMenuTriggerFor]="menu"><mat-icon>expand_more</mat-icon></span>
        <mat-menu #menu="matMenu">
            <p>{{item.descripcion}}</p>
-           <p>{{item.nombre}}</p>
+      
        </mat-menu>
        
     }
@@ -45,29 +43,7 @@
 </div>
 
 <div class="example-container">
-  <h2>Done</h2>
-
-  <div
-    cdkDropList
-      #doneList="cdkDropList"
-      [cdkDropListData]="done"
-      [cdkDropListConnectedTo]="[todoList]"
-      class="example-list"
-      (cdkDropListDropped)="drop($event)">
-      @for (item of done; track item) {
-      <div class="example-box" cdkDrag>{{item.nombre}}</div>
-        <span matButton [matMenuTriggerFor]="menu"><mat-icon>expand_more</mat-icon></span>
-       <mat-menu #menu="matMenu">
-           <p>{{item.descripcion}}</p>
-           <p>{{item.nombre}}</p>
-       </mat-menu>
-            
-    }
-  </div>
-</div>
-
-<div class="example-container">
-  <h2>Doing</h2>
+  <h2>Doing {{doing.length}}</h2>
 
   <div
     cdkDropList
@@ -77,15 +53,40 @@
       class="example-list"
       (cdkDropListDropped)="drop($event)">
       @for (item of doing; track item) {
-      <div class="example-box" cdkDrag>{{item.nombre}}</div>
+      <div class="example-box" cdkDrag>{{item.nombre}}
+      <button (click)="borrar(doing, item)">Borrar</button>
+      </div>
       <span matButton [matMenuTriggerFor]="menu"><mat-icon>expand_more</mat-icon></span>
         <mat-menu #menu="matMenu">
            <p>{{item.descripcion}}</p>
-           <p>{{item.nombre}}</p>
        </mat-menu>
          
       }
   </div>
+</div>
+
+<div class="example-container">
+  <h2>Done {{done.length}}</h2>
+
+  <div
+    cdkDropList
+      #doneList="cdkDropList"
+      [cdkDropListData]="done"
+      [cdkDropListConnectedTo]="[todoList]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      @for (item of done; track item) {
+      <div class="example-box" cdkDrag>{{item.nombre}}
+     <button (click)="borrar(done, item)">Borrar</button>
+      </div>
+        <span matButton [matMenuTriggerFor]="menu"><mat-icon>expand_more</mat-icon></span>
+       <mat-menu #menu="matMenu">
+           <p>{{item.descripcion}}</p>
+       </mat-menu>
+            
+    }
+  </div>
+</div>
 </div>
 
  

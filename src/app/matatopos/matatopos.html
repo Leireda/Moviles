@@ -1,2 +1,74 @@
-<div class="tablero"></div>
+<div class="tablero">
+      <div class="fila1">
+        
+         <button class="casilla1" (click)="topomover()">
+            <div *ngIf="topo ===1" class="topo"></div>
+          </button>
+
+          <button class="casilla2" (click)="topomover()">
+            <div *ngIf="topo ===2" class="topo"></div>
+          </button>
+
+          <button class="casilla3" (click)="topomover()">
+            <div *ngIf="topo ===3" class="topo"></div>
+          </button>
+
+      </div>
+    
+
+    <div class="fila2">
+      <button class="casilla4" (click)="topomover()">
+        <div *ngIf="topo ===4" class="topo"></div>
+      </button>
+      
+      <button class="casilla5" (click)="topomover()">
+         <div *ngIf="topo ===5" class="topo"></div>
+      </button>
+
+      <button class="casilla6" (click)="topomover()">
+         <div *ngIf="topo ===6" class="topo"></div>
+      </button>
+    </div>
+
+    <div class="fila3">
+        <button class="casilla7" (click)="topomover()">
+           <div *ngIf="topo ===7" class="topo"></div>
+        </button>
+
+        <button class="casilla8" (click)="topomover()">
+           <div *ngIf="topo ===8" class="topo"></div>
+        </button>
+
+        <button class="casilla9" (click)="topomover()">
+           <div *ngIf="topo ===9" class="topo"></div>
+        </button>
+
+      <button (click)="topomover()"></button>
+
+    </div>
+    
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    
