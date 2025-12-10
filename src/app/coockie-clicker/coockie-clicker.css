@@ -1,0 +1,17 @@
+#cookie {
+   
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    grid-template-columns: auto;
+   
+    width: 75px; 
+    height: 75px; 
+    
+    border: solid 2px, black;
+    border-radius: 50%; 
+    position: absolute;
+    cursor: pointer;
+    transition: 0.1s linear;
+}  
