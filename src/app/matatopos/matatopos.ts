@@ -17,17 +17,30 @@ topo:number =0;
 
 
 topomover(){
-this.topo = 1;
+ 
+this.topo += 1;
+
 
 
 this.topo = Math.floor(Math.random() * 9) + 1;
 
 
-}
+    }
+    
+incrementarContador(){
+     if(this.topo > 0){
+      this.topo++; 
+     }
+    }
+
+  }
 
 
 
-}
+
+
+
+
 
 
 
