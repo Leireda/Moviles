@@ -1,14 +1,14 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Navbar } from './navbar/navbar';
-
+import { PerrosComponent } from './perro/perro'; // <-- 1. Cambia 'Perro' por 'PerroComponent'
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar, RouterOutlet],
+  standalone: true,
+  imports: [RouterOutlet, PerrosComponent], // <-- 2. Cambia 'Perro' por 'PerroComponent' aquí también
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
-  protected readonly title = signal('Introduccion');
+export class AppComponent {
+  title = 'recuperacion';
 }
